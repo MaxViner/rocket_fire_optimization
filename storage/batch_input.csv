@@ -1,0 +1,4 @@
+H,D,V,N,C,T,W_dir,W_spd,Temp
+800,2000,240,4,stronghold,destroy,90,8,15
+1200,3500,260,7,apc,damage,180,12,10
+600,4500,220,10,infantry,suppress,270,5,25

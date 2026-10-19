@@ -1,0 +1,4 @@
+﻿H,D,V,N,C,T,W_dir,W_spd,Temp,P_kill_pred,is_valid,violations
+800,2000,240,4,stronghold,destroy,90,8,15,0.5991079093055114,True,
+1200,3500,260,7,apc,damage,180,12,10,0.9265887545136072,True,
+600,4500,220,10,infantry,suppress,270,5,25,0.9833987699015547,True,
