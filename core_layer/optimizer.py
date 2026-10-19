@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 
 from core_layer.constraint_checker import ConstraintChecker
-from core_layer.kill_Probability_Predictor import KillProbabilityPredictor
+from core_layer.killProbabilityPredictor import KillProbabilityPredictor
 
 
 class MissionOptimizer:
