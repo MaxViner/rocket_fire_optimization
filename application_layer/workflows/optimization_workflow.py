@@ -22,33 +22,38 @@ def run_optimization(
     """
     print("\nПоиск оптимальных условий пуска...")
 
+    search_ranges = {
+        "H": {
+            "min": application_conditions["H"]["min"],
+            "max": application_conditions["H"]["max"],
+            "step": application_conditions["H"]["step"]
+        },
+        "D": {
+            "min": application_conditions["D"]["min"],
+            "max": application_conditions["D"]["max"],
+            "step": application_conditions["D"]["step"]
+        },
+        "V": {
+            "min": application_conditions["V"]["min"],
+            "max": application_conditions["V"]["max"],
+            "step": application_conditions["V"]["step"]
+        },
+        "N": {
+            "min": 1,
+            "max": 20,
+            "step": 1
+        }
+    }
+
     return api.optimize_mission(
         target_type=mission_requirements["target_type"],
         effect_type=mission_requirements["effect_type"],
         weather=weather,
         p_required=mission_requirements["p_required"],
-        grid_step={
-            "H": application_conditions["H"]["step"],
-            "D": application_conditions["D"]["step"],
-            "V": application_conditions["V"]["step"]
-        },
-        search_ranges={
-            "H": (
-                application_conditions["H"]["min"],
-                application_conditions["H"]["max"]
-            ),
-            "D": (
-                application_conditions["D"]["min"],
-                application_conditions["D"]["max"]
-            ),
-            "V": (
-                application_conditions["V"]["min"],
-                application_conditions["V"]["max"]
-            )
-        },
-        fixed_values={}
+        search_ranges=search_ranges,
+        coarse_factor=4,
+        show_progress=True
     )
-
 
 def print_optimization_result(optimization_result: dict) -> dict | None:
     """

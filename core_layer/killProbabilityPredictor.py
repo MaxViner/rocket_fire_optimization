@@ -65,6 +65,9 @@ class KillProbabilityPredictor:
         }])
 
         return float(self.predict(row)[0])
+    
+    def predict_batch(self, df: pd.DataFrame) -> np.ndarray:
+        return self.predict(df)
 
 
 print("Модуль core_layer.predictor определён.")

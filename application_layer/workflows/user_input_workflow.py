@@ -15,18 +15,18 @@ from config import CONFIG
 TEST_APPLICATION_CONDITIONS = {
     "H": {
         "min": 100,
-        "max": 2000,
-        "step": 250
+        "max": 1000,
+        "step": 25
     },
     "D": {
-        "min": 1000,
+        "min": 2000,
         "max": 6000,
-        "step": 500
+        "step": 50
     },
     "V": {
         "min": 160,
         "max": 280,
-        "step": 20
+        "step": 5
     }
 }
 
@@ -34,7 +34,7 @@ TEST_APPLICATION_CONDITIONS = {
 TEST_WEATHER = {
     "dir": 90,
     "spd": 10,
-    "temp": 20
+    "temp": 22
 }
 
 

@@ -168,18 +168,21 @@ class ApplicationAPI:
         effect_type: str,
         weather: dict,
         p_required: float,
-        grid_step: dict = None,
-        fixed_values: dict = None,
-        search_ranges: dict = None
+        search_ranges: dict = None,
+        coarse_factor: int = 4,
+        show_progress: bool = True
     ):
+        """
+        Решает обратную задачу оптимизации параметров пуска.
+        """
         return self.optimizer.optimize(
             target_type=target_type,
             effect_type=effect_type,
             weather=weather,
             p_required=p_required,
-            grid_step=grid_step,
-            fixed_values=fixed_values,
-            search_ranges=search_ranges
+            search_ranges=search_ranges,
+            coarse_factor=coarse_factor,
+            show_progress=show_progress
         )
 
     # --------------------------------------------------------

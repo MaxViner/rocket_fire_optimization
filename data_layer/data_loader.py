@@ -206,7 +206,7 @@ class DataLoader:
         # - рост вероятности с увеличением N;
         # - насыщение вероятности при большом N.
         # ----------------------------------------------------
-        noise = rng.normal(0, 0.01, n_samples)
+        noise = rng.normal(0, 0.013, n_samples)
 
         P_kill = 1 - np.exp(
             -kill_calibration * effectiveness
